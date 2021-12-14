@@ -7,7 +7,7 @@ ntS.get('/', (req, res) =>
   readFromFile('./db/db.json').then((notes) => res.json(JSON.parse(notes)))
 );
 
-// GET Route for a specific tip
+// GET Route for a specific note
 ntS.get('/:id', (req, res) => {
   const noteId = req.params.id;
   readFromFile('./db/db.json')
